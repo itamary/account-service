@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'twalter/maven-docker'
-            args '-v /root/.m2:/root/.m2'
+            args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
     stages {
